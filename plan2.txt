@@ -1,0 +1,32 @@
+HANGMAN GAME;
+=====
+The user exprience and general flow:
+=
+Game -starts;
+init - all varibles like the choosen word ,
+choosen_word = random from list
+shown var = len(choosen_word) * -
+guess_cnt = starts with number and goes dwn every round
+guesses history = empty list
+flag of the gusses counter = true/false
+======
+con - while  loop runs by condition of the flag
+if false break
+check that the show var have no "-" if no - and flag true you win
+if true:
+==
+print -
+print the instructions
+print the history of guesses
+print the guees counter
+print the shown var (needs to be updated)
+==
+user input = 
+need to valid that it english letter and not sesative
+to lower or upper case and not more the 1 char
+-check the input:
+if the input no! in the choosen_word reduce the guess 
+counter by one go back to the start of the while
+
+if  yes= show the letter or more insside the shown var
+(replace the "-" in the shown var)
