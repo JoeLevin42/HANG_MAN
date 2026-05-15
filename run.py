@@ -77,7 +77,7 @@ def initilaze(word_list):
     """
     choosen_word = random.choice(word_list)
     shown_var = len(choosen_word) * " _ ".split()
-    guess_cnt = len(choosen_word) +1
+    guess_cnt = len(choosen_word) * 2
     guess_history = set()
     return {"choosen_word": choosen_word , "shown_var": shown_var , "guess_cnt" : guess_cnt , "guess_history" : guess_history}
 
@@ -109,11 +109,11 @@ def analyze_word_index(word):
     dict with the letters in the key and the apeearnes index and value list
     """
     index_dict = {}
-    for i , w in enumerate(word):
-        if w not in index_dict:
-            index_dict[w] = [i]
+    for index , word in enumerate(word):
+        if word not in index_dict:
+            index_dict[word] = [index]
         else:
-            index_dict[w].append(i)
+            index_dict[word].append(index)
     return index_dict
 
 def update_shown_var(shown_var:str ,letter :str, index_dict : dict):
